@@ -54,6 +54,15 @@ Your progress is saved automatically.
 
 ---
 
+## Notes
+The game stores progress in the browser via localStorage.
+
+Clearing browser data will reset your game.
+
+This project is intended for learning and portfolio demonstration.
+
+---
+
 ## How to Run (Local)
 
 ### Option 1: Open directly (quick start)
@@ -69,7 +78,7 @@ Using a local server can avoid browser restrictions in some setups.
 1. Install the **Live Server** extension in VS Code.
 2. Right-click `index.html` → **Open with Live Server**.
 
-**Using Python**
+**Using Python and then open http://localhost:8000 in your browser.**
 ```bash
 # from the project root directory
 python -m http.server 8000
