@@ -6,9 +6,9 @@ This repository includes:
 
 ---
 
-## 1) Backend: Java Spring Boot (Gradle)
+1) Backend: Java Spring Boot (Gradle)
 
-### Prerequisites
+Prerequisites
 - **Java 17** (JDK 17)
 - (Recommended) IntelliJ IDEA / VS Code
 
