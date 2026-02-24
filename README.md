@@ -13,7 +13,6 @@ Prerequisites
 - (Recommended) IntelliJ IDEA / VS Code
 
 Check Java version:
-```bash
 java -version
 How to Run (Java / Spring Boot)
 Option 1: Run with Gradle Wrapper (Recommended)
