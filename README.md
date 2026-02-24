@@ -6,91 +6,57 @@ Guess the hidden **6-letter** word within a limited number of attempts. The game
 ---
 
 ## Features
-- **6-letter word** guessing gameplay (Wordle-style feedback)
-- **On-screen keyboard** + **physical keyboard** support
-- Input rules: only submit when 6 letters are entered; supports Backspace and Enter
-- Real-time tile feedback:
-  - **Correct**: right letter, right position
-  - **Present**: letter exists but in a different position
-  - **Absent**: letter not in the word
-- Uses a public word API for:
-  - **Random target word** generation
-  - **Dictionary validation** for guesses
-- **Progress persistence** via `localStorage` (refresh won’t lose the current game)
+- Wordle-style **6-letter** guessing gameplay with instant feedback:
+  - **Correct** (right letter, right position)
+  - **Present** (letter exists, wrong position)
+  - **Absent** (letter not in the word)
+- Supports **physical keyboard** and **on-screen keyboard**
+- Input rules:
+  - Only allows submission when **6 letters** are entered
+  - Supports **Backspace** to delete and **Enter** to submit
+- Validates guesses using an online dictionary API
+- Saves game progress automatically using **localStorage** (refresh won’t lose your current game)
 
 ---
 
 ## Tech Stack
 - **HTML5**
 - **CSS3** (Flexbox layout)
-- **JavaScript (Vanilla)**: DOM manipulation, event handling
+- **JavaScript (Vanilla)**: DOM manipulation, events
 - **Fetch API** for REST requests
-- **localStorage** for saving game state
+- **localStorage** for persistence
 
 ---
 
 ## API Used
 This project uses the public word API from **words.trex-sandwich.com**:
 
-- Get a random 6-letter word:  
+- Random 6-letter word (target word):  
   `https://words.trex-sandwich.com/?count=1&length=6`
 
 - Validate a guessed word (example):  
   `https://words.trex-sandwich.com/<word>`
 
-> Note: The game requires an internet connection to fetch and validate words.
-
----
-
-## Project Structure
-.
-├── index.html
-├── css/
-│ └── style.css
-└── js/
-└── app.js
+> Note: An internet connection is required to fetch and validate words. If the API is unavailable, gameplay may be affected.
 
 ---
 
 ## How to Run (Local)
 
 ### Option 1: Open directly (quick start)
-1. Download or clone this repo.
+1. Download or clone this repository.
 2. Open `index.html` in your browser.
 
-✅ This is enough for most browsers.
+✅ This works in most browsers.
 
 ### Option 2: Run with a local server (recommended)
-Some environments work better with a local server.
+Using a local server can avoid browser restrictions in some setups.
 
 **Using VS Code Live Server**
-1. Install the **Live Server** extension.
+1. Install the **Live Server** extension in VS Code.
 2. Right-click `index.html` → **Open with Live Server**.
 
 **Using Python**
 ```bash
-# from the project root
+# from the project root directory
 python -m http.server 8000
-Then open: http://localhost:8000
-
-How to Play
-
-Type letters on your keyboard or click the on-screen keys.
-
-Press Enter to submit a guess (only when 6 letters are filled).
-
-Press Backspace to delete a letter.
-
-The board and keyboard colors update after each guess.
-
-The game saves your progress automatically.
-
-Notes
-
-Word validation and random word generation depend on the external API. If the API is unavailable, gameplay may be affected.
-
-Game state is stored in the browser via localStorage. Clearing browser data will reset your progress.
-
-License
-
-This project is for learning and demonstration purposes.
